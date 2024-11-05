@@ -11,11 +11,11 @@ const app = express();
 const PORT: number = Number(process.env.PORT) || 3001;
 
 // TODO: Serve static files of entire client dist folder
-app.use(express.static(path.join(_dirname, 'client', 'dist')));
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
 // TODO: Implement middleware for parsing JSON and urlencoded form data
 app.use(express.json());
-app.use(express.urlencodede({extended:true}));
+app.use(express.urlencoded({extended:true}));
 
 // TODO: Implement middleware to connect the routes
 app.use(routes);
